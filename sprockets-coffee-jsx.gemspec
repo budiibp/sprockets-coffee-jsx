@@ -20,7 +20,7 @@ Gem::Specification.new do |s|
   EOS
   s.license     = "MIT"
 
-  s.files = Dir["{lib}/**/*"] + ["LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{lib}/**/*"] + ["LICENSE", "Rakefile", "README.md"]
   #s.test_files = Dir["test/**/*"]
 
   s.add_runtime_dependency 'coffee-react', ">= 3.4.0"
