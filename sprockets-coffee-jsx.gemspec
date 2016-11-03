@@ -15,8 +15,8 @@ Gem::Specification.new do |s|
   s.description = <<-EOS
     Preprocessor for Coffeescript with React JSX (CJSX).
     This gem makes it easy to integrate this into the Rails asset pipeline or other Sprockets chains.
-    If you want to use CJSX without Sprockets, see the coffee-react gem, or the coffee-react npm module.
-    This is an update version of sprockets-coffee-react gem.
+    If you want to use CJSX without Sprockets, see the coffee-jsx gem, or the coffee-jsx npm module.
+    This is an update version of sprockets-coffee-jsx gem.
   EOS
   s.license     = "MIT"
 

@@ -1,8 +1,8 @@
 require 'test_helper'
 
-class SprocketsCoffeeReactTest < ActionDispatch::IntegrationTest
+class SprocketsCoffeeJsxTest < ActionDispatch::IntegrationTest
   test "truth" do
-    assert_kind_of Module, Sprockets::CoffeeReact
+    assert_kind_of Module, Sprockets::CoffeeJsx
   end
 
   test ".js.coffee with pragma" do

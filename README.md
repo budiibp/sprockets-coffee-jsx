@@ -2,7 +2,7 @@
 
 Preprocessor for Coffeescript with React JSX (CJSX) support.
 
-This is an updated version of [sprockets-coffee-react](https://github.com/jsdf/sprockets-coffee-react) gem.
+This is an updated version of [sprockets-coffee-jsx](https://github.com/jsdf/sprockets-coffee-jsx) gem.
 
 This gem makes it easy to integrate this into the Rails asset pipeline or other Sprockets chains.
 
@@ -24,15 +24,15 @@ the sprockets-coffee-jsx engine:
 
 ```ruby
 require 'sprockets'
-require 'sprockets/coffee-react'
+require 'sprockets/coffee-jsx'
 map '/assets' do
   environment = Sprockets::Environment.new
   environment.append_path 'app/assets/javascripts'
   environment.append_path 'app/assets/stylesheets'
   environment.register_mime_type 'text/cjsx', extensions: ['.cjsx', '.js.cjsx', '.js.coffee.cjsx'], charset: :unicode
-  environment.register_transformer 'text/cjsx', 'application/javascript', Sprockets::CoffeeReactScript
-  environment.register_preprocessor 'application/javascript', Sprockets::CoffeeReact
-  environment.register_postprocessor 'application/javascript', Sprockets::CoffeeReactPostprocessor
+  environment.register_transformer 'text/cjsx', 'application/javascript', Sprockets::CoffeeJsxScript
+  environment.register_preprocessor 'application/javascript', Sprockets::CoffeeJsx
+  environment.register_postprocessor 'application/javascript', Sprockets::CoffeeJsxPostprocessor
   run environment
 end
 
@@ -46,11 +46,11 @@ end
 Add the following to your config.rb file:
 
 ```ruby
-require 'sprockets/coffee-react'
+require 'sprockets/coffee-jsx'
 ::Sprockets.register_mime_type 'text/cjsx', extensions: ['.cjsx', '.js.cjsx', '.js.coffee.cjsx'], charset: :unicode
-::Sprockets.register_transformer 'text/cjsx', 'application/javascript', Sprockets::CoffeeReactScript
-::Sprockets.register_preprocessor 'application/javascript', Sprockets::CoffeeReact
-::Sprockets.register_postprocessor 'application/javascript', Sprockets::CoffeeReactPostprocessor
+::Sprockets.register_transformer 'text/cjsx', 'application/javascript', Sprockets::CoffeeJsxScript
+::Sprockets.register_preprocessor 'application/javascript', Sprockets::CoffeeJsx
+::Sprockets.register_postprocessor 'application/javascript', Sprockets::CoffeeJsxPostprocessor
 ```
 
 # License
